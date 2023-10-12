@@ -118,29 +118,11 @@ contract XenGame {
     mapping(address => mapping(uint256 => bool)) public earlyKeysReceived;
 
     constructor(
-        // address _nftContractAddress,
-        // address _nftRegistryAddress,
-        // address _xenBurnContract,
-        // address _playerNameRegistryAddress,
         
-        // address[] memory playeraddresses,
-        // uint256[] memory playerRound1KeyCount,       // array parameter
-        // uint256[] memory playerRound1BurntKeys,      // array parameter
-        // uint256[] memory playerRound1EarlyBuyinPoints, // array parameter
-        // uint256[] memory playerReferralRewards,      // array parameter        
-        // uint256[] memory playerRound1RewardRatio,    // array parameter
-        // uint256[] memory playerKeyRewards,           // array parameter
-        // uint256[] memory playerNumberOfReferrals      // array parameter
     
     ) {
 
-        // require(playeraddresses.length == playerRound1KeyCount.length, "Length mismatch: playeraddresses and playerRound1KeyCount");
-        // require(playeraddresses.length == playerRound1BurntKeys.length, "Length mismatch: playeraddresses and playerRound1BurntKeys");
-        // require(playeraddresses.length == playerRound1EarlyBuyinPoints.length, "Length mismatch: playeraddresses and playerRound1EarlyBuyinPoints");
-        // require(playeraddresses.length == playerReferralRewards.length, "Length mismatch: playeraddresses and playerReferralRewards");
-        // require(playeraddresses.length == playerRound1RewardRatio.length, "Length mismatch: playeraddresses and playerRound1RewardRatio");
-        // require(playeraddresses.length == playerKeyRewards.length, "Length mismatch: playeraddresses and playerKeyRewards");
-        // require(playeraddresses.length == playerNumberOfReferrals.length, "Length mismatch: playeraddresses and playerNumberOfReferrals");
+        
 
         nftContract = IXENnftContract(0x0a252663DBCc0b073063D6420a40319e438Cfa59);  // Eth address
         nftRegistry = INFTRegistry(0xEDa159A0339826C96c30D39A1be8588d82212395); // X1 Eth address
@@ -160,40 +142,7 @@ contract XenGame {
         rounds[currentRound].end = block.timestamp + 12 hours;  // Update to set new end time on migration        
         rounds[currentRound].ended = false;
 
-        // Loop through the playeraddresses, playerReferralRewards, playerKeyRewards, and playerNumberOfReferrals arrays, and set the player data
-        // for (uint i = 0; i < playeraddresses.length; i++) {            
-
-            
-        //         players[playeraddresses[i]].keyCount[1] = playerRound1KeyCount[i];
-            
-        //     if (playerRound1BurntKeys[i] > 0) {
-        //         players[playeraddresses[i]].burntKeys[1] = playerRound1BurntKeys[i];
-        //     }
-        //     if (playerRound1EarlyBuyinPoints[i] > 0) {
-        //         players[playeraddresses[i]].earlyBuyinPoints[1] = playerRound1EarlyBuyinPoints[i];
-        //     }
-        //     if (playerReferralRewards[i] > 0) {
-        //         players[playeraddresses[i]].referralRewards = playerReferralRewards[i];
-        //     }
-            
-        //         players[playeraddresses[i]].lastRewardRatio[1] = playerRound1RewardRatio[i];
-            
-            
-        //         players[playeraddresses[i]].keyRewards = playerKeyRewards[i];
-            
-        //     if (playerNumberOfReferrals[i] > 0) {
-        //         players[playeraddresses[i]].numberOfReferrals = playerNumberOfReferrals[i];
-        //     }
-
-        //     if (players[playeraddresses[i]].earlyBuyinPoints[1] > 0 && players[playeraddresses[i]].keyCount[1] > 0) {
-        //         earlyKeysReceived[playeraddresses[i]][1] = true;
-        //     }
-
-        //     // Add the player to the isPlayerInRound mapping for the current round
-        //     isPlayerInRound[currentRound][playeraddresses[i]] = true;
-
-        //     rounds[currentRound].playerAddresses.push(playeraddresses[i]);
-        // }
+        
         
     }
 
