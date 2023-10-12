@@ -142,11 +142,11 @@ contract XenGame {
         // require(playeraddresses.length == playerKeyRewards.length, "Length mismatch: playeraddresses and playerKeyRewards");
         // require(playeraddresses.length == playerNumberOfReferrals.length, "Length mismatch: playeraddresses and playerNumberOfReferrals");
 
-        nftContract = IXENnftContract(0xe9d00D1A70AB37b7902850e7f8b6bd432e1efe71);  // X1 testing address
-        nftRegistry = INFTRegistry(0x5C0f5eCbb016A015721c9571E51FaEF1C41ba91E); // X1 testing address
-        xenBurn = XENBurn(0xfF164e55a6075540e340A8232f317dCD6691B568); // X1 testing address
-        playerNameRegistry = IPlayerNameRegistry(0x835940AeADc403322f62C361A1e16AfD47035AF6); // X1 testing address
-        playerNames = 0x835940AeADc403322f62C361A1e16AfD47035AF6; // X1 testing address
+        nftContract = IXENnftContract(0x0a252663DBCc0b073063D6420a40319e438Cfa59);  // Eth address
+        nftRegistry = INFTRegistry(0xEDa159A0339826C96c30D39A1be8588d82212395); // X1 Eth address
+        xenBurn = XENBurn(0x573E18d9dF2496B1768139Eb4c712B9b086be294); // Eth address
+        playerNameRegistry = IPlayerNameRegistry(0x68317FE2590DC605C730628fb645DE0F17F86BFc); // Eth address
+        playerNames = 0x68317FE2590DC605C730628fb645DE0F17F86BFc; // Eth address
 
         currentRound = 1;
         rounds[currentRound].totalKeys = 10097300000000000000000000;
